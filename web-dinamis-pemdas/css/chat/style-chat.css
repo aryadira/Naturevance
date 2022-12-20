@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --green: #00FF00;
+    --gray: #F9F9F9;
+    --gray-2: #D1D1D1;
+    --blue: #3383D3;
+    --young-blue: #E9F4FF;
+    --young-blue-2: #E1F0FF;
+    --light-blue: #F1FCFF;
+    --very-light-blue: #E5FBFF;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+ 
+body {
+   overflow-x: hidden; 
+   height: 200vh;
+}
+
+/* SIDEBAR LEFT */
+.sidebar-left {
+    width: 80px;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    background: var(--white);
+    z-index: 99;
+}
+
+.logo {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: var(--black);
+}
+
+/* SIDEBAR LIST */
+.sidebar-list {
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+}
+
+.sidebar-list a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.sidebar-list li {
+    padding: 20px 28px;
+    border-right: 2px solid rgba(0, 0, 0, 0);
+}
+
+.sidebar-list li:hover {
+    background: var(--young-blue-2);
+}
+
+.sidebar-list li.in {
+    background: var(--young-blue);
+    border-right: 2px solid var(--blue);
+}
+
+.sidebar-list li.in:hover {
+    background: var(--young-blue-2);
+    border-right: 2px solid var(--blue);
+}
+/* END SIDEBAR LEFT */
+
+/* ========== NAVBAR MID TOP ========== */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background: var(--white);
+    border-bottom: 1px solid #eee;
+    padding: 23px 0;
+    z-index: 11;
+}
+
+.nav-left {
+    width: 380px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1px solid #eee;
+}
+
+.others {
+    width: 970px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.others .call {
+    padding-right: 10px;
+}
+
+/* SEARCH MENU */
+.search-menu {  
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.search-menu span {
+    position: absolute;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.search-menu input {
+    padding: 6px 40px;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    width: 293px;
+    font-size: 13px;
+    background: var(--gray);
+    margin-left: 20px;
+    color: var(--gray-2);
+}
+
+/* RIGHT */
+.nav-name-contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.circle-photo-contact {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.group-name-contact {
+    width: 550px;
+    height: 50px;
+    margin-left: 60px;
+}
+
+.name-contact {
+    font-size: 15px;
+    color: #444;
+}
+
+.group-name-contact .last-seen {
+    font-size: 14px;
+}
+/* ========== END NAVBAR MID TOP ========== */
+
+/* ========== STORY ========== */
+.story {
+    width: 320px;
+    height: 100vh;
+    padding-top: 55px;
+    margin-left: 80px;
+    background: var(--white);
+    position: fixed;
+    z-index: 10;
+}
+
+.title-story {
+    font-size: 19px;
+    padding: 20px 10px 10px 20px;
+}
+
+/* STORY */
+.stories-title h1{
+    font-size: 1.8rem;
+}
+.stories-title .btn {
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.stories-title .btn i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.stories{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    overflow-x: hidden;
+}
+.stories-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #e2336b;
+    padding: 0 5px;
+}
+.stories-img img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center;
+}
+.stories-img.color{
+    border: 2px solid #dbdbdb;
+}
+.stories-img .add{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #fff;
+    background: hsla(246, 100%, 67%, 0.7);
+}
+
+/* ========== LIST COUNTRY ==========*/
+.grouping-little-contact-visitors {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.list-contact {
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 427px;
+}
+
+.contact-menu {
+    width: 100%;   
+}
+
+.contact-menu a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.contact-bar {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.contact-bar.on {
+    background: var(--light-blue);
+}
+
+.contact-bar:hover {
+    background: var(--very-light-blue);
+    color: var(--black);
+}
+
+.online-detail {
+    color: #65FF3E;
+    text-shadow: 0px 0px 3px #65FF3E;
+}
+
+.offline-detail {
+    color: #FF1C23;
+    text-shadow: 0px 0px 3px #FF1C23;
+}
+
+.group-circle-contact {
+    display: flex;
+    align-items: center;
+}
+
+.group-circle-contact .circle-contact {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.group-circle-contact .circle-contact img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    object-fit: cover;
+}
+
+.group-circle-contact .name-contact {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.group-circle-contact .text-contact {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+/* CONTENT */
+.content {
+    width: 955px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray);
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.content h3 {
+    color: #aaa;
+}
+
+/* MIDDLE CONTENT COUNTRY INDONESIA*/
